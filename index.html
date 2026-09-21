@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DATEL design system</title>
+<meta name="description" content="Design system DATA ELEKTRONIK: barvy, písmo, tvar rohů, komponenty a pravidla pro web datel.cz a tiskoviny.">
+<link rel="icon" href="assets/logo/DATEL_SYMBOL_barevny_svetly_podklad.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/brand.css">
+<link rel="stylesheet" href="css/styleguide.css">
+<style>
+/* Úvodní stránka styleguidu — postavená jen z tokens.css a brand.css (a .sg- rámu). */
+.sg-home { background: var(--dtl-bg); color: var(--dtl-ink); font: var(--dtl-body); }
+.home-wrap { position: relative; z-index: 3; max-width: var(--dtl-container); margin: 0 auto; padding: 0 var(--dtl-gutter); }
+.home-hero { padding: 112px 0 104px; }
+.home-hero .dtl-lead { max-width: 60ch; }
+.home-actions { display: flex; flex-wrap: wrap; gap: 16px 20px; margin-top: 36px; }
+.home-sec { position: relative; padding: var(--dtl-section) 0; }
+.home-sec--blue { background: var(--dtl-blue-bg); }
+.home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--dtl-gutter); margin-top: 40px; }
+.home-card { display: flex; flex-direction: column; text-decoration: none; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out; }
+a.home-card:hover { transform: translateY(var(--dtl-btn-lift)); box-shadow: var(--dtl-shadow-blue); }
+.home-card .home-num { font: 700 14px/20px var(--dtl-font); letter-spacing: var(--dtl-eyebrow-ls); color: var(--dtl-blue); margin-bottom: 14px; }
+.home-card h3 { margin: 0 0 10px; font: var(--dtl-h3); color: var(--dtl-violet); }
+.home-card p { margin: 0; font: 400 15px/1.6 var(--dtl-font); color: var(--dtl-ink-3); }
+.home-card .home-more { margin-top: auto; padding-top: 22px; font: 700 13px/20px var(--dtl-font); letter-spacing: var(--dtl-cta-ls); text-transform: uppercase; color: var(--dtl-blue); }
+.home-files { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--dtl-gutter); margin-top: 40px; }
+.home-files code, .home-code { font-family: ui-monospace, Consolas, 'Cascadia Mono', monospace; font-size: 13px; }
+.home-files .dtl-card code { color: var(--dtl-violet); font-weight: 700; font-size: 15px; }
+.home-code { display: block; margin-top: 32px; padding: 22px 26px; overflow-x: auto; white-space: pre; border-radius: var(--dtl-corner); background: var(--dtl-ink); color: #D6DEE8; line-height: 1.85; }
+.home-code i { font-style: normal; color: #7C8794; }
+.home-practice { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.home-practice .dtl-list li { font-weight: 500; }
+.home-links { display: flex; flex-wrap: wrap; gap: 16px 20px; }
+.home-foot { padding: 40px 0 48px; border-top: 1px solid var(--dtl-line); }
+.home-foot .home-wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+.home-foot img { display: block; height: 44px; width: auto; }
+@media (max-width: 959px) {
+  .home-hero { padding: 72px 0 64px; }
+  .home-sec { padding: 56px 0; }
+  .dtl-h1 { font-size: 34px; line-height: 1.15; }
+  .dtl-h2 { font-size: 26px; line-height: 1.2; }
+  .home-practice { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body class="sg sg-home">
+<header class="sg-bar">
+  <a class="sg-brand" href="index.html"><img src="assets/logo/DATEL_LOGO_horizontalni_barevne_na_svetly_podklad.svg" alt="DATEL"><span>Design system</span></a>
+  <nav class="sg-nav" aria-label="Stránky design systemu"><a href="zaklady.html"><b>01</b>Základy</a><a href="typografie.html"><b>02</b>Typografie</a><a href="komponenty.html"><b>03</b>Komponenty</a><a href="bloky.html"><b>04</b>Obsahové bloky</a><a href="tokeny.html"><b>05</b>Tokeny a pravidla</a><a href="ukazka-desktop.html"><b>06</b>Ukázka · desktop</a><a href="ukazka-mobil.html"><b>07</b>Ukázka · mobil</a></nav>
+</header>
+
+<section class="dtl-violet dtl-rulers home-hero">
+  <div class="dtl-pattern"></div>
+  <div class="home-wrap">
+    <p class="dtl-eyebrow">Design system · DATA ELEKTRONIK</p>
+    <h1 class="dtl-h1">Jeden vizuální jazyk <span>pro web datel.cz</span></h1>
+    <p class="dtl-lead">Barvy, písmo, tvar, komponenty a pravidla pro nové podstránky i tiskoviny. Postavené z Brandmanuálu v1.1 a z produkčního webu, ověřené na podstránce Kalibrace a justáž měřidel.</p>
+    <div class="home-actions">
+      <a class="dtl-btn" href="https://github.com/hutterlukas22-dot/datel-design-system/archive/refs/heads/main.zip">Stáhnout vše (ZIP)</a>
+      <a class="dtl-btn dtl-btn--white" href="https://github.com/hutterlukas22-dot/datel-design-system/blob/main/DESIGN.md">Pravidla v DESIGN.md</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-sec">
+  <div class="home-wrap">
+    <p class="dtl-eyebrow">Stránky</p>
+    <h2 class="dtl-h2">Co v systému <span>najdete</span></h2>
+    <div class="home-grid">
+      <a class="dtl-card home-card" href="zaklady.html"><span class="home-num">01</span><h3>Základy</h3><p>Logo a všechny jeho varianty, barvy, pattern, pravítko, mřížka a tvar rohů.</p><span class="home-more">Otevřít</span></a>
+      <a class="dtl-card home-card" href="typografie.html"><span class="home-num">02</span><h3>Typografie</h3><p>Satoshi, škála nadpisů, štítek, perex, odrážky, mobilní škála a česká sazba.</p><span class="home-more">Otevřít</span></a>
+      <a class="dtl-card home-card" href="komponenty.html"><span class="home-num">03</span><h3>Komponenty</h3><p>Tlačítka ve všech stavech, formulářová pole, štítky, ikony a jednotný styl tabulek.</p><span class="home-more">Otevřít</span></a>
+      <a class="dtl-card home-card" href="bloky.html"><span class="home-num">04</span><h3>Obsahové bloky</h3><p>Karty, reference, kontaktní osoba, anatomie hlavičky sekce a patička.</p><span class="home-more">Otevřít</span></a>
+      <a class="dtl-card home-card" href="tokeny.html"><span class="home-num">05</span><h3>Tokeny a pravidla</h3><p>CSS proměnné a jedenáct pravidel, která drží systém pohromadě.</p><span class="home-more">Otevřít</span></a>
+      <a class="dtl-card home-card" href="ukazka-desktop.html"><span class="home-num">06</span><h3>Ukázka · desktop</h3><p>Šablona podstránky složená jen z bloků systému.</p><span class="home-more">Otevřít</span></a>
+      <a class="dtl-card home-card" href="ukazka-mobil.html"><span class="home-num">07</span><h3>Ukázka · mobil</h3><p>Stejná šablona na šířce 390 px.</p><span class="home-more">Otevřít</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="home-sec home-sec--blue">
+  <div class="home-wrap">
+    <p class="dtl-eyebrow">Pro vývojáře</p>
+    <h2 class="dtl-h2">Soubory <span>k převzetí</span></h2>
+    <p class="dtl-text">Vše je obyčejné CSS a SVG, bez závislostí. Třídy mají předponu <code>.dtl-</code>, takže nic z webu nepřepíšou.</p>
+    <div class="home-files">
+      <div class="dtl-card"><code>css/tokens.css</code><p class="dtl-text" style="margin:12px 0 0">CSS proměnné: barvy, písmo, velikosti nadpisů, rohy, stíny, tlačítka, pattern a pravítka.</p></div>
+      <div class="dtl-card"><code>css/brand.css</code><p class="dtl-text" style="margin:12px 0 0">Hotové prvky: štítek, dvoubarevné nadpisy, tlačítka, karta, odrážky, pattern, pravítka a tabulka.</p></div>
+      <div class="dtl-card"><code>assets/</code><p class="dtl-text" style="margin:12px 0 0">Logo ve 20 variantách, 20 ikon, čistá dlaždice patternu, levé a pravé pravítko.</p></div>
+    </div>
+    <code class="home-code"><i>&lt;!-- písmo Satoshi z fontshare.com --&gt;</i>
+&lt;link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap"&gt;
+&lt;link rel="stylesheet" href="css/tokens.css"&gt;
+&lt;link rel="stylesheet" href="css/brand.css"&gt;
+
+&lt;section class="dtl-violet dtl-rulers"&gt;
+  &lt;div class="dtl-pattern"&gt;&lt;/div&gt;
+  &lt;p class="dtl-eyebrow"&gt;Naše služby&lt;/p&gt;
+  &lt;h2 class="dtl-h2"&gt;Kalibrace &lt;span&gt;a justáž měřidel&lt;/span&gt;&lt;/h2&gt;
+  &lt;a class="dtl-btn" href="#poptavka"&gt;Nezávazně poptat&lt;/a&gt;
+&lt;/section&gt;</code>
+  </div>
+</section>
+
+<section class="home-sec">
+  <div class="home-wrap home-practice">
+    <div>
+      <p class="dtl-eyebrow">V praxi</p>
+      <h2 class="dtl-h2">Kalibrace a justáž <span>měřidel</span></h2>
+      <p class="dtl-text">První podstránka postavená na tomto systému. Hlavička, patička a formulář jsou převzaté z webu, nový obsah používá stejné barvy, rohy, tabulky i pravidla.</p>
+      <div class="home-links">
+        <a class="dtl-btn dtl-btn--blue" href="https://hutterlukas22-dot.github.io/datel-kalibrace/">Náhled podstránky</a>
+        <a class="dtl-btn dtl-btn--violet" href="https://github.com/hutterlukas22-dot/datel-kalibrace">Kód podstránky</a>
+      </div>
+    </div>
+    <ul class="dtl-list">
+      <li>Jedna zelená akce na obrazovku</li>
+      <li>Dva rohy zaoblené, dva ostré</li>
+      <li>Štítek → nadpis → perex → obsah → jedna akce</li>
+      <li>Tabulky jednotně, na webu i v tisku</li>
+      <li>Teplota červeně, vlhkost modře</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="home-foot">
+  <div class="home-wrap">
+    <img src="assets/logo/DATEL_LOGO+CLAIM_horizontalni_barevne_na_svetly_podklad.svg" alt="DATEL — Záruka přesného měření">
+    <p class="dtl-meta" style="margin:0">Postaveno z Brandmanuálu DATA ELEKTRONIK v1.1 a z produkčního webu datel.cz · 2026</p>
+  </div>
+</footer>
+</body>
+</html>

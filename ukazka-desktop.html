@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukázka · desktop · DATEL design system</title>
+<link rel="icon" href="assets/logo/DATEL_SYMBOL_barevny_svetly_podklad.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&amp;display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Satoshi','Manrope','Segoe UI',system-ui,sans-serif;color:#0F1620;background:#FDFDFD;-webkit-font-smoothing:antialiased}
+a{color:#008FCD;text-decoration:none}a:hover{color:#331F5E}
+.sheet{padding:64px}
+.eyebrow{display:flex;align-items:center;gap:18px;font-weight:700;font-size:14px;line-height:20px;letter-spacing:.1em;text-transform:uppercase;color:#331F5E;margin:0 0 14px}.eyebrow::before{content:"";flex:0 0 auto;width:56px;height:3px;background:currentColor}
+.sec-title{font-weight:700;font-size:34px;line-height:1.12;letter-spacing:-.01em;margin:0 0 8px;color:#331F5E}
+.sec-note{font-size:15px;line-height:1.6;color:#535353;margin:0;max-width:64ch}
+.hr{height:1px;background:#E4E8EE;border:0;margin:48px 0}
+.grid{display:grid;gap:24px}
+.stack{display:flex;flex-direction:column}
+.row{display:flex;align-items:center}
+.mono{font-family:'JetBrains Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;font-size:12px;letter-spacing:.01em}
+.card{background:#FFFFFF;border:1px solid #E4E8EE;border-radius: 0 20px 0 20px}
+.lbl{font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#707070}
+
+.dtl-pattern{position:absolute;inset:0;pointer-events:none;background-image:url(assets/pattern.svg);background-repeat:repeat;background-size:235.25px 262.5px;background-position:0 0}
+    body{background:#fff}
+    .wrap{width:1200px;margin:0 auto}
+    .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:19px 40px;border:0;border-radius: 0 20px 0 20px;font:700 14px/20px 'Satoshi','Manrope',sans-serif;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;color:#000}
+    .sect{padding:96px 0}
+</style>
+<link rel="stylesheet" href="css/styleguide.css">
+</head>
+<body class="sg">
+<header class="sg-bar">
+  <a class="sg-brand" href="index.html"><img src="assets/logo/DATEL_LOGO_horizontalni_barevne_na_svetly_podklad.svg" alt="DATEL"><span>Design system</span></a>
+  <nav class="sg-nav" aria-label="Stránky design systemu"><a href="zaklady.html"><b>01</b>Základy</a><a href="typografie.html"><b>02</b>Typografie</a><a href="komponenty.html"><b>03</b>Komponenty</a><a href="bloky.html"><b>04</b>Obsahové bloky</a><a href="tokeny.html"><b>05</b>Tokeny a pravidla</a><a href="ukazka-desktop.html" aria-current="page"><b>06</b>Ukázka · desktop</a><a href="ukazka-mobil.html"><b>07</b>Ukázka · mobil</a></nav>
+</header>
+<main class="sg-frame"><div class="sg-board" data-width="1440" style="width:1440px">
+<div style="width: 1440px; background: #fff">
+
+  <div style="background: #fff; border-bottom: 1px solid #E4E8EE">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 40px; font-size: 12.5px; color: #707070">
+      <span style="font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 11px; color: #008FCD">Záruka přesného měření</span>
+      <div style="display: flex; gap: 24px"><span>datel@datel.cz</span><span>+420 775 225 941</span><span>Po&ndash;Pá 9:00&ndash;17:00</span></div>
+    </div>
+  </div>
+
+  <div style="background: #fff; border-bottom: 1px solid #E4E8EE">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 80px">
+      <span style="width: 155px; aspect-ratio: 3.5262; display: inline-flex; flex: 0 0 auto"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.34 25.62"><g><g><path fill="#331F5E" stroke-width="0px" d="m38.29,15.56c0-3.57,2.13-6.05,5.55-6.05,1.39,0,2.72.56,3.37,1.39v-6.74h3.46v16.94h-3.26l-.18-1.44c-.61,1.03-2,1.73-3.62,1.73-3.24,0-5.33-2.29-5.33-5.84m8.9-.14c0-1.69-1.12-2.81-2.74-2.81s-2.67,1.15-2.67,2.81,1.03,2.81,2.67,2.81,2.74-1.12,2.74-2.81"/><path fill="#331F5E" stroke-width="0px" d="m52.81,17.81c0-2.07,1.46-3.35,4.16-3.55l3.15-.25v-.18c0-1.1-.67-1.69-1.91-1.69-1.46,0-2.25.56-2.25,1.57h-2.88c0-2.54,2.09-4.2,5.3-4.2s5.1,1.82,5.1,5.03v6.56h-3.06l-.22-1.48c-.36,1.03-1.84,1.78-3.53,1.78-2.38,0-3.87-1.39-3.87-3.6m7.33-.9v-.61l-1.75.16c-1.51.14-2.05.47-2.05,1.19,0,.81.49,1.19,1.55,1.19,1.33,0,2.25-.65,2.25-1.93"/><path fill="#331F5E" stroke-width="0px" d="m66.93,21.11v-8.36h-2.14v-2.88h2.13v-3.48h3.46v3.48h2.13v2.88h-2.13v8.36h-3.46Z"/><path fill="#331F5E" stroke-width="0px" d="m27.64,6.24h1.81v.47h-.65v1.84h-.5v-1.84h-.65v-.47Z"/><path fill="#331F5E" stroke-width="0px" d="m29.76,8.54v-2.3h.49l.68,1.72.69-1.72h.49v2.3h-.49v-.48c-.01-.26,0-.52.02-.78l-.49,1.26h-.46l-.49-1.26c.03.2.04.41.03.62v.64h-.49Z"/><rect fill="#331F5E" stroke-width="0px" x="6.4" y="12.81" width="6.41" height="6.41"/><path stroke-width="0px" fill="#008FCD" d="m73.35,15.47c0-3.51,2.36-5.96,5.75-5.96s5.73,2.31,5.73,5.98v.88l-8.16.04c.2,1.48,1.03,2.18,2.56,2.18,1.3,0,2.22-.47,2.47-1.28h3.17c-.4,2.5-2.63,4.09-5.71,4.09-3.39,0-5.82-2.47-5.82-5.93m3.37-1.19h4.67c0-1.19-.88-1.96-2.27-1.96s-2.14.61-2.41,1.96"/><rect stroke-width="0px" fill="#008FCD" x="86.88" y="4.16" width="3.46" height="16.94"/><path stroke-width="0px" fill="#008FCD" d="m32.03,12.81h0c0,7.07-5.74,12.81-12.81,12.81h-6.41v-6.4h6.41c3.54,0,6.41-2.87,6.41-6.41h0s6.4,0,6.4,0Z"/><path stroke-width="0px" fill="#008FCD" d="m25.63,12.81h-6.41c0-3.54-2.87-6.41-6.41-6.41h-6.41C2.87,6.4,0,3.54,0,0h0s12.82,0,12.82,0c7.07,0,12.81,5.74,12.81,12.81"/></g></g></svg></span>
+      <div style="display: flex; align-items: center; gap: 32px; font-weight: 700; font-size: 14px">
+        <span>Produkty</span>
+        <span style="color: #008FCD; border-bottom: 2px solid #008FCD; padding-bottom: 4px">Služby a podpora</span>
+        <span>Aplikace</span>
+        <span>Reference</span>
+        <button class="btn" style="background: #23CE6B; color: #331F5E">NAPIŠTE NÁM</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #331F5E; position: relative; overflow: hidden">
+    <div aria-hidden="true" class="dtl-pattern" style="opacity: 0.5"></div><img src="assets/ruler-l.svg" alt="" aria-hidden="true" style="position: absolute; bottom: 0; left: 0; width: 37px; height: 864px; opacity: .5; pointer-events: none"><img src="assets/ruler-l.svg" alt="" aria-hidden="true" style="position: absolute; bottom: 0; right: 0; width: 37px; height: 864px; opacity: .5; transform: scaleX(-1); pointer-events: none">
+    <div class="wrap" style="position: relative; padding: 72px 0 80px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px; align-items: center">
+      <div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 28px">
+        <span>Úvod</span><span>/</span><span>Služby a podpora</span><span>/</span><span style="color: #fff">Kalibrace a justáž</span>
+      </div>
+      <p class="eyebrow" style="color: #FDFDFD">Služby</p>
+      <h1 style="margin: 0 0 20px; font-weight: 700; font-size: 56px; line-height: 1.08; letter-spacing: -.015em; max-width: 20ch"><span style="color: #FDFDFD">Kalibrace a justáž měřidel</span><br><span style="color: #46B9EB">ve vlastní laboratoři</span></h1>
+      <p style="margin: 0 0 32px; font-size: 19px; line-height: 1.65; color: rgba(255,255,255,.78); max-width: 60ch">Kalibrujeme vlhkostní, teplotní a tlakové přístroje &mdash; a u každé kalibrace běžně provádíme i justáž, takže vám měřidlo neposíláme zpět jen s protokolem, ale i seřízené.</p>
+      <div style="display: flex; gap: 12px">
+        <button class="btn" style="background: #23CE6B; color: #331F5E; ">POPTAT KALIBRACI</button>
+        <button class="btn" style="background: rgba(253,253,253,.4); border: 2px solid #FDFDFD; color: #FDFDFD; padding: 17px 38px; ">STÁHNOUT CENÍK</button>
+      </div>
+      </div>
+      <img src="assets/img/monitoring.png" alt="Měřicí přístroje a dataloggery Rotronic, MadgeTech, Teracom a UniTemp" style="display: block; width: 100%; height: auto">
+    </div>
+  </div>
+
+  <div class="sect">
+    <div class="wrap">
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 24px">
+        <div style="width: 180px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <span style="width: 80px; height: 80px; display: inline-flex; flex: 0 0 auto; margin-bottom: 16px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><g><g><path fill="#B4E2F6" d="M13.75,5.79l.35,9.11-2.54,2.18.4,2.49s1.75,1.41,2.46,1.41,3.49-.87,3.49-1.61-.31-3.24-1.09-3.75-1.02-9.43-1.46-9.8-1.62-.03-1.62-.03Z"/><g><path fill="#008FCD" d="M14.98,24c-3.24-.05-5.83-2.72-5.79-5.97.03-1.92,1-3.71,2.59-4.78V3.27C11.8,1.46,13.27,0,15.09,0c1.8.01,3.25,1.46,3.26,3.26v9.98c1.63,1.09,2.6,2.92,2.59,4.87,0,3.24-2.63,5.87-5.87,5.88-.03,0-.05,0-.08,0ZM12.69,3.27v10.23c0,.16-.08.3-.22.39-2.34,1.44-3.07,4.5-1.63,6.84.89,1.45,2.46,2.34,4.16,2.37.03,0,.06,0,.09,0,1.3,0,2.55-.51,3.47-1.43,1.96-1.93,1.98-5.07.05-7.03-.28-.29-.6-.54-.95-.75-.14-.08-.22-.23-.22-.39V3.27c.01-1.31-1.04-2.39-2.36-2.4s-2.39,1.04-2.4,2.36v.04h0ZM14.9,21.64h0c-1.94-.09-3.44-1.74-3.34-3.68.06-1.34.89-2.53,2.12-3.06V6.1c0-.77.64-1.39,1.41-1.38.76,0,1.37.62,1.38,1.38v8.79c1.78.77,2.6,2.84,1.83,4.63-.56,1.29-1.82,2.12-3.23,2.12-.05,0-.11,0-.16,0h0ZM14.57,6.1v9.11c0,.2-.13.37-.31.43-1.37.44-2.13,1.92-1.68,3.29.33,1.03,1.27,1.75,2.36,1.8.05,0,.09,0,.14,0,1.44,0,2.6-1.17,2.6-2.61,0-1.13-.73-2.14-1.81-2.49-.19-.06-.31-.23-.31-.43V6.1c0-.27-.21-.5-.48-.5s-.5.21-.5.48v.02ZM20.02,11.74c-.25,0-.45-.21-.44-.46,0-.24.2-.44.44-.44h1.41c.25,0,.46.19.46.44s-.19.46-.44.46h-1.44ZM20.02,9.85c-.25,0-.46-.19-.46-.44s.19-.46.44-.46h2.38c.25,0,.45.21.44.46,0,.24-.2.44-.44.44h-2.36ZM5.42,8.93v-.47c0-.25.21-.45.46-.44.24,0,.44.2.44.44v.47c0,.25-.21.45-.46.44-.24,0-.44-.2-.44-.44ZM8.55,8.01l-.33-.33c-.18-.18-.18-.46,0-.64.18-.18.46-.18.64,0l.33.33c.18.18.18.46,0,.64-.09.08-.2.13-.32.13s-.23-.05-.32-.13h0ZM2.55,8.01c-.09-.09-.13-.2-.13-.32,0-.12.05-.24.13-.32l.33-.33c.18-.17.47-.17.64.01.17.18.17.45,0,.63l-.33.33c-.08.09-.2.13-.32.13-.12,0-.24-.05-.32-.13h0ZM20.02,7.97c-.25,0-.45-.21-.44-.46,0-.24.2-.44.44-.44h1.41c.25,0,.46.19.46.44s-.19.46-.44.46h-1.44ZM4.98,6.85c-.57-.24-1.03-.69-1.27-1.27-.48-1.2.1-2.56,1.3-3.04,1.18-.47,2.52.08,3.02,1.25.49,1.19-.07,2.56-1.26,3.06-.57.24-1.22.24-1.79,0h0ZM5.32,3.36c-.73.3-1.08,1.14-.78,1.87.15.35.43.63.78.78.35.15.75.15,1.1,0,.73-.3,1.08-1.14.78-1.87s-1.14-1.08-1.87-.78h0ZM20.02,6.08c-.25,0-.46-.19-.46-.44s.19-.46.44-.46h2.38c.25,0,.45.21.44.46,0,.24-.2.44-.44.44h-2.36ZM9.64,5.14c-.25,0-.46-.19-.46-.44s.19-.46.44-.46h.49c.25,0,.46.19.46.44s-.19.46-.44.46h-.49ZM1.63,5.14c-.25,0-.45-.21-.44-.46,0-.24.2-.44.44-.44h.47c.25,0,.46.19.46.44s-.19.46-.44.46h-.49ZM20.02,4.19c-.25,0-.45-.21-.44-.46,0-.24.2-.44.44-.44h1.41c.25,0,.46.19.46.44s-.19.46-.44.46h-1.44ZM8.22,2.34c-.18-.18-.18-.46,0-.64l.34-.33c.08-.09.2-.13.32-.13.25,0,.45.2.45.45,0,.12-.05.23-.13.32l-.33.33c-.08.09-.2.13-.32.13-.12,0-.24-.05-.32-.13h0ZM2.88,2.34l-.33-.33c-.18-.17-.19-.46-.01-.64.17-.18.46-.19.64-.01h.01s.33.35.33.35c.18.18.18.46,0,.64-.18.18-.46.18-.64,0h0ZM20.02,2.31c-.25,0-.46-.19-.46-.44s.19-.46.44-.46h2.38c.25,0,.45.21.44.46,0,.24-.2.44-.44.44h-2.36ZM5.42.91v-.47c0-.25.21-.45.46-.44.24,0,.44.2.44.44v.47c0,.25-.21.45-.46.44-.24,0-.44-.2-.44-.44Z"/></g></g></g></g></svg></span>
+          <p style="margin: 0 0 10px; font-weight: 700; font-size: 17px; line-height: 24px; color: #331F5E; text-transform: uppercase">Teplota</p>
+          <p style="margin: 0; font-size: 14px; line-height: 22px; color: #707070">&minus;40 až +200&nbsp;&deg;C, srovnávací i pevné body</p>
+        </div>
+        <div style="width: 180px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <span style="width: 80px; height: 80px; display: inline-flex; flex: 0 0 auto; margin-bottom: 16px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><g><g><path fill="#B4E2F6" d="M17.17,3.24s-4.27,5.56-4.23,8.5c.03,2.94,2.06,4.72,4.58,4.65s4.06-2.55,3.74-4.51c-.31-1.96-4.09-8.64-4.09-8.64Z"/><g><path fill="#008FCD" d="M7.78,21.05c0-1.4,2.17-4.71,2.42-5.09.16-.21.46-.26.67-.1.04.03.07.06.1.1.25.38,2.42,3.69,2.42,5.09,0,1.6-1.29,2.95-2.81,2.95h0c-1.52,0-2.81-1.35-2.81-2.95ZM10.59,17.08c-.85,1.36-1.88,3.25-1.88,3.97,0,1.08.88,2.02,1.88,2.02s1.88-.94,1.88-2.02c0-.72-1.03-2.62-1.88-3.97h0ZM2.15,13.87c0-1.65,2.6-5.47,2.9-5.89.16-.21.46-.25.67-.09,0,0,0,0,0,0,.03.03.06.06.09.09.3.43,2.9,4.24,2.9,5.89,0,1.81-1.47,3.28-3.28,3.28s-3.28-1.47-3.28-3.28ZM3.08,13.87c0,1.3,1.05,2.35,2.35,2.35s2.35-1.05,2.35-2.35c0-.91-1.31-3.22-2.35-4.8-1.03,1.58-2.35,3.89-2.35,4.8h0ZM10.8,12.91c-.6-1.7.37-3.95.37-3.95C12.51,5.43,15.7.41,15.83.2c.15-.22.45-.27.67-.11,0,0,0,0,0,0,.04.03.08.07.11.11.22.33,5.24,8.23,5.24,11.18,0,3.11-2.52,5.63-5.63,5.63-2.52,0-4.73-1.68-5.42-4.1ZM12.04,9.28c-.83,1.99-.34,3.37-.34,3.37.7,2.5,3.3,3.95,5.79,3.25,2.03-.57,3.43-2.42,3.43-4.52,0-2.04-3.09-7.46-4.69-10.06-.91,1.47-3.15,5.23-4.18,7.95h0ZM16.22,14.2c1.56,0,2.82-1.26,2.82-2.82.01,0,.93,0,.93,0,0,2.07-1.68,3.75-3.75,3.75,0-.02,0-.92,0-.93h0Z"/></g></g></g></g></svg></span>
+          <p style="margin: 0 0 10px; font-weight: 700; font-size: 17px; line-height: 24px; color: #331F5E; text-transform: uppercase">Vlhkost</p>
+          <p style="margin: 0; font-size: 14px; line-height: 22px; color: #707070">5&ndash;95&nbsp;%RH, solné roztoky i generátor</p>
+        </div>
+        <div style="width: 180px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <span style="width: 80px; height: 80px; display: inline-flex; flex: 0 0 auto; margin-bottom: 16px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><g><g><path fill="#B4E2F6" d="M3.11,15.75s1.66,5.31,4.84,6.59,6.4,1.38,8.68-.09,4.03-5.07,3.98-6.92c-.05-1.85-.3-12.03-.3-12.03l-4.53.55-.24,12.05-1.75,1.9s-2.99.47-3.51.14-2.16-2.12-2.16-2.12l-5-.06Z"/><g><path fill="#008FCD" d="M11.88,24c-5.02-.01-9.09-4.08-9.1-9.1V3.05c0-.25.2-.46.46-.46s.46.2.46.46v11.85h4.3V.46C8,.21,8.2,0,8.46,0s.46.2.46.46v14.44h3.34l.51-.51c.17-.18.46-.19.65-.02.18.17.19.46.02.65,0,0-.01.01-.02.02l-1.75,1.76c-.18.18-.47.17-.65,0-.17-.18-.17-.46,0-.64l.33-.33h-2.28c.4,1.22,1.54,2.06,2.82,2.06h.24c1.64,0,2.96-1.33,2.97-2.97V4.21h-2.93l-.82.82c-.19.17-.48.16-.65-.03-.16-.17-.16-.44,0-.62l2.07-2.07c.19-.17.48-.15.65.04.15.17.15.43,0,.6l-.33.34h2.01V.46c0-.25.2-.46.46-.46s.46.2.46.46v2.84h4.3v-1.27c0-.25.2-.46.46-.46s.46.2.46.46v12.87c-.01,5.02-4.08,9.09-9.1,9.1h-.24ZM11.88,23.09h.24c4.52-.01,8.17-3.67,8.19-8.19V4.21h-4.3v10.69c0,2.14-1.74,3.88-3.88,3.88h-.24c-1.79,0-3.35-1.23-3.77-2.97H3.75c.47,4.14,3.97,7.26,8.13,7.28h0ZM12.36,21.53c-.24,0-.45-.19-.46-.44-.01-.25.18-.47.44-.48s.47.18.48.44c.01.25-.18.47-.43.48h-.02ZM10.42,21.32c-.25-.06-.39-.31-.33-.55.06-.25.31-.39.55-.33.01,0,.02,0,.03,0,.24.07.38.33.31.57-.06.19-.23.33-.44.33-.04,0-.09,0-.13-.02h0ZM13.72,20.88c-.08-.24.04-.5.27-.59h0c.23-.09.5.02.6.25s-.02.5-.25.6c-.01,0-.02,0-.04.01-.05.02-.1.03-.15.03-.19,0-.37-.12-.43-.3h0ZM8.65,20.49h0c-.21-.14-.27-.42-.14-.64s.42-.27.63-.14.27.42.14.63c0,0,0,0,0,0-.08.13-.23.21-.38.21-.09,0-.18-.02-.25-.07h0ZM15.38,20.13c-.15-.2-.11-.49.09-.64.2-.15.49-.11.64.09.15.2.11.49-.09.64h0c-.08.06-.18.09-.27.09-.14,0-.28-.07-.37-.18h0ZM7.17,19.23c-.17-.19-.16-.48.03-.65.19-.17.48-.16.65.03.17.19.16.47-.03.65-.08.08-.19.12-.31.12-.13,0-.25-.05-.34-.15h0ZM16.76,18.93c-.2-.15-.25-.44-.1-.64.15-.2.44-.25.64-.1.2.15.25.43.1.64-.09.12-.22.19-.37.19-.1,0-.19-.03-.27-.08h0ZM6.05,17.66c-.12-.22-.04-.5.18-.62.22-.12.5-.04.62.18,0,0,0,0,0,0h0c.12.22.04.5-.19.62-.07.04-.14.06-.22.06-.17,0-.32-.09-.4-.24h0ZM17.72,17.37c-.24-.08-.37-.34-.28-.58.08-.24.34-.37.58-.28s.37.34.28.58c-.06.18-.24.31-.43.31-.05,0-.1,0-.15-.02h0ZM18.18,15.61c-.25,0-.45-.22-.44-.47s.22-.45.47-.44c.25,0,.45.22.44.47h0s0,0,0,0c0,.25-.21.44-.46.44h-.01ZM17.74,13.32c0-.25.2-.46.46-.46s.46.2.46.46-.2.46-.46.46c-.25,0-.45-.2-.46-.45h0ZM12.93,13.62l-2.51-1.45c-.22-.13-.29-.41-.17-.62.04-.07.1-.13.17-.17l2.51-1.45c.14-.08.32-.08.46,0,.14.08.23.23.23.4v2.9c0,.16-.09.31-.23.4-.07.04-.15.06-.23.06-.08,0-.16-.02-.23-.06h0ZM11.56,11.77l1.14.66v-1.32l-1.14.66ZM17.74,11.49c0-.25.2-.46.46-.46s.46.2.46.46-.2.46-.46.46c-.25,0-.45-.2-.46-.45h0ZM17.74,9.66c0-.25.2-.46.46-.46s.46.2.46.46-.2.46-.46.46c-.25,0-.45-.2-.46-.45h0ZM10.55,8.95c-.25,0-.46-.2-.46-.46v-1.06c0-.73.59-1.33,1.33-1.33h0c.74,0,1.33.6,1.33,1.33,0,.25-.2.46-.46.46s-.46-.2-.46-.46c0-.23-.19-.42-.42-.42-.23,0-.42.19-.42.42h0v.61h2.33c.25,0,.46.2.46.46s-.2.46-.46.46h-2.79ZM17.74,7.83c0-.25.2-.46.46-.46s.46.2.46.46-.2.46-.46.46c-.25,0-.45-.2-.46-.45h0ZM17.74,6c0-.25.2-.46.46-.46s.46.2.46.46-.2.46-.46.46c-.25,0-.45-.2-.46-.46h0Z"/></g></g></g></g></svg></span>
+          <p style="margin: 0 0 10px; font-weight: 700; font-size: 17px; line-height: 24px; color: #331F5E; text-transform: uppercase">Diferenční tlak</p>
+          <p style="margin: 0; font-size: 14px; line-height: 22px; color: #707070">Rozsahy podle typu převodníku</p>
+        </div>
+        <div style="width: 180px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <span style="width: 80px; height: 80px; display: inline-flex; flex: 0 0 auto; margin-bottom: 16px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><g><g><rect fill="#B4E2F6" x="4.3" y="6.72" width="6.71" height="7.5"/><g><path fill="#008FCD" d="M22.06,17.18H1.94V3.66h20.11v13.52ZM2.71,16.41h18.59V4.42H2.71v11.99Z"/><path fill="#008FCD" d="M2.71,20.15H0V3.66h2.71v16.49ZM.76,19.39h1.18V4.42H.76v14.97Z"/></g><path fill="#008FCD" d="M11.61,14.48H3.8V6.45h7.81v8.03ZM4.56,13.72h6.29v-6.5h-6.29v6.5Z"/><rect fill="#008FCD" x="5.78" y="8.55" width="4.04" height="1.27"/><rect fill="#008FCD" x="5.78" y="11.02" width="4.04" height="1.27"/><g><path fill="#008FCD" d="M24,20.15h-2.71V3.66h2.71v16.49ZM22.06,19.39h1.18V4.42h-1.18v14.97Z"/><path fill="#008FCD" d="M16.62,13.95c-1,0-1.93-.39-2.64-1.09s-1.09-1.64-1.09-2.64c0-1,.39-1.93,1.09-2.64.7-.7,1.64-1.09,2.64-1.09h0c2.06,0,3.73,1.67,3.73,3.73,0,1-.39,1.93-1.09,2.64-.7.7-1.64,1.09-2.64,1.09h0ZM16.62,7.24h0c-.79,0-1.54.31-2.1.87-.56.56-.87,1.31-.87,2.1,0,1.64,1.33,2.97,2.97,2.97h0c1.64,0,2.97-1.33,2.97-2.97,0-1.64-1.33-2.97-2.97-2.97Z"/><circle fill="#008FCD" cx="15.74" cy="10.75" r=".55"/><path fill="#008FCD" d="M17.36,9.01c0,.31-.25.55-.55.55s-.55-.25-.55-.55.25-.55.55-.55.55.25.55.55Z"/><path fill="#008FCD" d="M18.38,10.75c0,.31-.25.55-.55.55s-.55-.25-.55-.55.25-.55.55-.55.55.25.55.55Z"/><path fill="#008FCD" d="M10.95,20.34c-.3,0-.62-.04-.96-.11-3.31-.73-3.68-5.89-3.7-6.11l.76-.05s.35,4.8,3.1,5.41c.87.19,1.56.09,2.06-.31.88-.7.99-2.09,1-2.65h.76c0,.68-.15,2.34-1.29,3.25-.48.38-1.06.57-1.75.57Z"/></g></g></g></g></svg></span>
+          <p style="margin: 0 0 10px; font-weight: 700; font-size: 17px; line-height: 24px; color: #331F5E; text-transform: uppercase">Protokol</p>
+          <p style="margin: 0; font-size: 14px; line-height: 22px; color: #707070">Digitálně do 5 pracovních dnů</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #F2F5F8; padding: 96px 0">
+    <div class="wrap" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center">
+      <div>
+        <p class="eyebrow">Jak to probíhá</p>
+        <h2 style="margin: 0 0 10px; font-weight: 700; font-size: 38px; line-height: 1.12; letter-spacing: -.01em"><span style="color: #331F5E">Čtyři kroky od poptávky</span><br><span style="color: #008FCD">k seřízenému měřidlu</span></h2>
+        <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.7; color: #707070; max-width: 56ch">Přístroj u nás neleží. Standardní termín je 5 pracovních dnů od doručení, u expresního režimu 48 hodin.</p>
+        <button class="btn" style="background: #008FCD; color: #fff">POSLAT PŘÍSTROJ NA KALIBRACI</button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; gap: 18px; background: #fff; border: 1px solid #E4E8EE; border-radius:  0 20px 0 20px; padding: 20px 22px">
+          <span style="font-weight: 700; font-size: 15px; color: #008FCD; font-variant-numeric: tabular-nums">01</span>
+          <div><p style="margin: 0; font-weight: 700; font-size: 16px">Poptávka a potvrzení rozsahu</p><p style="margin: 4px 0 0; font-size: 14.5px; line-height: 1.6; color: #707070">Napíšete typ přístroje, my potvrdíme body kalibrace a cenu.</p></div>
+        </div>
+        <div style="display: flex; gap: 18px; background: #fff; border: 1px solid #E4E8EE; border-radius:  0 20px 0 20px; padding: 20px 22px">
+          <span style="font-weight: 700; font-size: 15px; color: #008FCD; font-variant-numeric: tabular-nums">02</span>
+          <div><p style="margin: 0; font-weight: 700; font-size: 16px">Doručení do laboratoře v Brně</p><p style="margin: 4px 0 0; font-size: 14.5px; line-height: 1.6; color: #707070">Osobně, přepravcem, nebo svozem u větších zakázek.</p></div>
+        </div>
+        <div style="display: flex; gap: 18px; background: #fff; border: 1px solid #E4E8EE; border-radius:  0 20px 0 20px; padding: 20px 22px">
+          <span style="font-weight: 700; font-size: 15px; color: #008FCD; font-variant-numeric: tabular-nums">03</span>
+          <div><p style="margin: 0; font-weight: 700; font-size: 16px">Kalibrace a justáž</p><p style="margin: 4px 0 0; font-size: 14.5px; line-height: 1.6; color: #707070">Změříme odchylku a přístroj rovnou seřídíme do tolerance.</p></div>
+        </div>
+        <div style="display: flex; gap: 18px; background: #fff; border: 1px solid #E4E8EE; border-radius:  0 20px 0 20px; padding: 20px 22px">
+          <span style="font-weight: 700; font-size: 15px; color: #008FCD; font-variant-numeric: tabular-nums">04</span>
+          <div><p style="margin: 0; font-weight: 700; font-size: 16px">Protokol a odeslání zpět</p><p style="margin: 4px 0 0; font-size: 14.5px; line-height: 1.6; color: #707070">Protokol dostanete digitálně, přístroj přepravcem.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect">
+    <div class="wrap" style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px">
+      <div>
+        <p class="eyebrow">Časté dotazy</p>
+        <h2 style="margin: 0 0 28px; font-weight: 700; font-size: 38px; line-height: 1.12; letter-spacing: -.01em"><span style="color: #331F5E">Na co se ptáte</span><br><span style="color: #008FCD">nejčastěji</span></h2>
+        <div style="border-top: 1px solid #E4E8EE">
+          <div style="border-bottom: 1px solid #E4E8EE; padding: 20px 0">
+            <div style="display: flex; justify-content: space-between; gap: 16px; align-items: center"><p style="margin: 0; font-weight: 700; font-size: 17px">Jak často je nutné měřidlo kalibrovat?</p>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008FCD" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 15 6-6 6 6"></path></svg></div>
+            <p style="margin: 12px 0 0; font-size: 15px; line-height: 1.7; color: #707070; max-width: 60ch">Ve většině regulovaných provozů jednou ročně. Interval ale určuje váš systém řízení kvality a stabilita konkrétního přístroje.</p>
+          </div>
+          <div style="border-bottom: 1px solid #E4E8EE; padding: 20px 0; display: flex; justify-content: space-between; gap: 16px; align-items: center">
+            <p style="margin: 0; font-weight: 700; font-size: 17px; color: #707070">Kalibrujete i přístroje jiných značek?</p>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#707070" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+          </div>
+          <div style="border-bottom: 1px solid #E4E8EE; padding: 20px 0; display: flex; justify-content: space-between; gap: 16px; align-items: center">
+            <p style="margin: 0; font-weight: 700; font-size: 17px; color: #707070">Můžu si na dobu kalibrace zapůjčit náhradu?</p>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#707070" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #E6F4FA; border-radius:  0 20px 0 20px; padding: 36px; align-self: start">
+        <p class="eyebrow">Nezávazná poptávka</p>
+        <p style="margin: 0 0 22px; font-weight: 700; font-size: 24px; line-height: 1.22"><span style="color: #331F5E">Napište nám, co</span><br><span style="color: #008FCD">potřebujete zkalibrovat</span></p>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div style="height: 48px; border: 1px solid #B4E2F6; border-radius:  0 20px 0 20px; background: #fff; padding: 0 14px; display: flex; align-items: center; font-size: 15px; color: #9AA3AE">Jméno a příjmení *</div>
+          <div style="height: 48px; border: 1px solid #B4E2F6; border-radius:  0 20px 0 20px; background: #fff; padding: 0 14px; display: flex; align-items: center; font-size: 15px; color: #9AA3AE">E-mail *</div>
+          <div style="height: 96px; border: 1px solid #B4E2F6; border-radius:  0 20px 0 20px; background: #fff; padding: 12px 14px; font-size: 15px; color: #9AA3AE">Typ přístroje a počet kusů</div>
+          <button class="btn" style="background: #23CE6B; color: #331F5E; width: 100%">ODESLAT POPTÁVKU</button>
+          <p style="margin: 0; font-size: 12px; line-height: 1.6; color: #0B5B80; font-weight: 700; letter-spacing: .04em; text-transform: uppercase">Ozveme se nejpozději následující pracovní den</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #331F5E; padding: 56px 0; position: relative; overflow: hidden"><div aria-hidden="true" class="dtl-pattern" style="opacity: 0.5"></div>
+    <div class="wrap" style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 32px">
+      <p style="margin: 0; font-weight: 700; font-size: 26px; line-height: 1.25; color: #fff; max-width: 34ch">Nevíte, jestli vaše měřidlo kalibraci potřebuje? Zavolejte, poradíme za pět minut.</p>
+      <div style="display: flex; gap: 12px; flex: 0 0 auto">
+        <button class="btn" style="background: #23CE6B; color: #331F5E; ">+420 775 225 941</button>
+        <button class="btn" style="background: rgba(253,253,253,.4); border: 2px solid #FDFDFD; color: #FDFDFD; padding: 17px 38px; ">NAPSAT E-MAIL</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div></main>
+<script src="js/styleguide.js"></script>
+</body>
+</html>

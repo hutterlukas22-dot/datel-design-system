@@ -1,0 +1,83 @@
+/* =====================================================================
+   DATEL design tokens — brandmanuál DATA ELEKTRONIK v1.1 + produkční web datel.cz
+   Podrobný popis použití: DESIGN.md
+   Pozn.: web datel.cz počítá v rem, kde 1rem = 10px na 1920 px a na menších šířkách se zmenšuje.
+   Tokeny jsou v px pro čitelnost; na webu je převeďte na rem (16px = 1.6rem).
+   ===================================================================== */
+:root {
+  /* Barvy — primární */
+  --dtl-blue:        #008FCD;
+  --dtl-blue-light:  #46B9EB;  /* hovery, ikony, druhý řádek nadpisu na fialové */
+  --dtl-blue-dark:   #00658F;  /* odkazy v odstavci (kontrast 5,6:1) */
+  --dtl-blue-50:     #E6F4FA;
+  --dtl-blue-100:    #B4E2F6;  /* výplň ikon, hlavička tabulky */
+  --dtl-blue-bg:     #DAF1FB;  /* podklad modrých sekcí na webu */
+  --dtl-violet:      #331F5E;
+
+  /* Barvy — sekundární, pouze CTA */
+  --dtl-green:       #23CE6B;
+  --dtl-green-hover: #2DE37A;  /* dle produkčního CSS */
+  --dtl-green-ink:   #331F5E;  /* text na zelené dle manuálu (kontrast 6,7:1) */
+
+  /* Neutrály */
+  --dtl-ink:         #0F1620;
+  --dtl-ink-2:       #535353;  /* podnadpisy */
+  --dtl-ink-3:       #707070;  /* odstavce, popisky */
+  --dtl-line:        #E4E8EE;
+  --dtl-surface:     #F2F5F8;
+  --dtl-bg:          #FDFDFD;  /* „bílá“ značky, čistá #FFF se nepoužívá */
+
+  /* Stavové */
+  --dtl-error:       #C0392B;
+  --dtl-error-bg:    #FDECEA;
+
+  /* Veličiny v grafech a osách (schváleno klientem na podstránce Kalibrace, 09/2026) */
+  --dtl-temp:        #E0303A;  /* teplota */
+  --dtl-temp-light:  #FCE6E7;
+  --dtl-rh:          #008FCD;  /* relativní vlhkost */
+  --dtl-rh-light:    #DAF1FB;
+
+  /* Tabulky — jednotný styl pro web i tisk */
+  --dtl-table-head:  #B4E2F6;
+  --dtl-table-line:  #9D9D9D;
+
+  /* Typografie — Satoshi (fontshare.com), Regular a Bold */
+  --dtl-font: 'Satoshi', 'Manrope', system-ui, sans-serif;
+  --dtl-h1: 700 56px/1.08 var(--dtl-font);   /* mobil 34/1.15 */
+  --dtl-h2: 700 38px/1.12 var(--dtl-font);   /* mobil 26/1.2  */
+  --dtl-h3: 700 22px/1.25 var(--dtl-font);   /* mobil 19/1.3  */
+  --dtl-lead: 400 19px/1.8 var(--dtl-font);   /* mobil 17/1.6 */
+  --dtl-body: 400 16px/1.7 var(--dtl-font);   /* 27 px, jako web */
+  --dtl-meta: 400 13px/1.55 var(--dtl-font);
+  --dtl-eyebrow-ls: .1em;   /* štítek, verzálky */
+  --dtl-cta-ls:     .05em;  /* CTA, 50 pt dle manuálu */
+
+  /* Prostor a tvar */
+  --dtl-container: 1200px;
+  --dtl-gutter:    24px;
+  --dtl-section:   96px;    /* mobil 56px */
+  /* Tvar rohů — podpis značky: zaoblený pravý horní a levý dolní roh */
+  --dtl-corner:    0 20px 0 20px;   /* tlačítka, karty, obrázky */
+  --dtl-corner-sm: 0 10px 0 10px;   /* štítky, pole, drobné prvky */
+
+  /* Tlačítka — z produkčního CSS */
+  --dtl-btn-font: 700 14px/20px var(--dtl-font);
+  --dtl-btn-pad:  19px 40px;
+  --dtl-btn-pad-sm: 9px 40px;
+  --dtl-btn-lift: -5px;             /* posun na hover */
+  --dtl-shadow-cta:    0 5px 20px 0 rgba(35,206,107,.36);
+  --dtl-shadow-blue:   0 5px 20px 0 rgba(0,143,205,.2);
+  --dtl-shadow-violet: 0 5px 20px 0 rgba(51,31,94,.36);
+  --dtl-shadow-card:   0 3px 6px 0 rgba(0,0,0,.12);
+
+  /* Pattern — čistá rapportová dlaždice (assets/pattern.svg) */
+  --dtl-tile-w: 235.25px;
+  --dtl-tile-h: 262.5px;
+  --dtl-pattern-on-white:  .2;
+  --dtl-pattern-on-violet: .5;
+
+  /* Pravítko (assets/ruler-l.svg, ruler-r.svg) */
+  --dtl-ruler-opacity: .5;
+  --dtl-ruler-w: 37px;
+  --dtl-ruler-h: 864px;
+}

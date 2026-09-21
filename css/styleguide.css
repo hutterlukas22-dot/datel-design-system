@@ -1,0 +1,24 @@
+/* Rámec styleguidu: horní lišta a plocha pro stránky design systemu (pevná šířka 1440 px, mobil 390 px).
+   Třídy .sg- patří jen styleguidu, na web se nepřebírají. */
+.sg { margin: 0; background: #F2F5F8; }
+.sg-bar {
+  position: sticky; top: 0; z-index: 100; display: flex; align-items: center; gap: 28px;
+  height: 64px; padding: 0 24px; background: #FDFDFD; border-bottom: 1px solid #E4E8EE;
+  font-family: 'Satoshi', 'Manrope', system-ui, sans-serif;
+}
+.sg-brand { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; text-decoration: none !important; }
+.sg-brand img { display: block; width: auto; height: 28px; }
+.sg-brand span { padding-left: 14px; border-left: 1px solid #E4E8EE; font: 700 12px/1 'Satoshi', system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #707070; }
+.sg-nav { display: flex; gap: 4px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.sg-nav::-webkit-scrollbar { display: none; }
+.sg-nav a { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 0 10px 0 10px; font: 500 14px/20px 'Satoshi', system-ui, sans-serif; color: #535353 !important; white-space: nowrap; text-decoration: none !important; }
+.sg-nav a b { font-weight: 700; color: #008FCD; }
+.sg-nav a:hover { background: #E6F4FA; }
+.sg-nav a[aria-current] { background: #331F5E; color: #FDFDFD !important; }
+.sg-nav a[aria-current] b { color: #46B9EB; }
+.sg-frame { padding: 32px 16px 64px; overflow-x: auto; }
+.sg-board { margin: 0 auto; background: #FDFDFD; box-shadow: 0 1px 3px rgba(15,22,32,.08), 0 12px 40px rgba(15,22,32,.08); }
+@media (max-width: 760px) {
+  .sg-bar { gap: 16px; padding: 0 16px; }
+  .sg-brand span { display: none; }
+}

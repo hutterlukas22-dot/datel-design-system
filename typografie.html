@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typografie · DATEL design system</title>
+<link rel="icon" href="assets/logo/DATEL_SYMBOL_barevny_svetly_podklad.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&amp;display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Satoshi','Manrope','Segoe UI',system-ui,sans-serif;color:#0F1620;background:#FDFDFD;-webkit-font-smoothing:antialiased}
+a{color:#008FCD;text-decoration:none}a:hover{color:#331F5E}
+.sheet{padding:64px}
+.eyebrow{display:flex;align-items:center;gap:18px;font-weight:700;font-size:14px;line-height:20px;letter-spacing:.1em;text-transform:uppercase;color:#331F5E;margin:0 0 14px}.eyebrow::before{content:"";flex:0 0 auto;width:56px;height:3px;background:currentColor}
+.sec-title{font-weight:700;font-size:34px;line-height:1.12;letter-spacing:-.01em;margin:0 0 8px;color:#331F5E}
+.sec-note{font-size:15px;line-height:1.6;color:#535353;margin:0;max-width:64ch}
+.hr{height:1px;background:#E4E8EE;border:0;margin:48px 0}
+.grid{display:grid;gap:24px}
+.stack{display:flex;flex-direction:column}
+.row{display:flex;align-items:center}
+.mono{font-family:'JetBrains Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;font-size:12px;letter-spacing:.01em}
+.card{background:#FFFFFF;border:1px solid #E4E8EE;border-radius: 0 20px 0 20px}
+.lbl{font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#707070}
+
+.dtl-pattern{position:absolute;inset:0;pointer-events:none;background-image:url(assets/pattern.svg);background-repeat:repeat;background-size:235.25px 262.5px;background-position:0 0}
+    .spec{display:grid;grid-template-columns:180px 1fr;gap:32px;padding:26px 0;border-top:1px solid #E4E8EE;align-items:start}
+    .spec .meta p{margin:0;font-size:12.5px;line-height:1.6;color:#707070}
+    .spec .meta .n{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#0F1620;margin-bottom:6px}
+    .spec .meta .t{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:#008FCD;margin-top:6px}
+</style>
+<link rel="stylesheet" href="css/styleguide.css">
+</head>
+<body class="sg">
+<header class="sg-bar">
+  <a class="sg-brand" href="index.html"><img src="assets/logo/DATEL_LOGO_horizontalni_barevne_na_svetly_podklad.svg" alt="DATEL"><span>Design system</span></a>
+  <nav class="sg-nav" aria-label="Stránky design systemu"><a href="zaklady.html"><b>01</b>Základy</a><a href="typografie.html" aria-current="page"><b>02</b>Typografie</a><a href="komponenty.html"><b>03</b>Komponenty</a><a href="bloky.html"><b>04</b>Obsahové bloky</a><a href="tokeny.html"><b>05</b>Tokeny a pravidla</a><a href="ukazka-desktop.html"><b>06</b>Ukázka · desktop</a><a href="ukazka-mobil.html"><b>07</b>Ukázka · mobil</a></nav>
+</header>
+<main class="sg-frame"><div class="sg-board" data-width="1440" style="width:1440px">
+<div class="sheet" style="width: 1440px">
+
+  <p class="eyebrow">Design system &middot; 02</p>
+  <h1 class="sec-title" style="font-size: 46px">Typografie</h1>
+  <p class="sec-note">Jediné písmo je <strong>Satoshi</strong> (fontshare.com) v řezech Regular a Bold &mdash; přesně podle manuálu. Sazba na této ploše běží v pravém Satoshi, vloženém přímo do dokumentu. Fallback pro e-mail a systémy bez licence: Manrope, dál system-ui.</p>
+
+  <hr class="hr">
+
+  <div class="spec" style="border-top: 0">
+    <div class="meta">
+      <p class="n">Štítek</p>
+      <p>Bold, verzálky, prostrkání 50&nbsp;pt, <strong>fialová</strong>. Vždy s vodorovnou linkou vlevo (56&times;3&nbsp;px v barvě textu). Na fialovém podkladu bílý.</p>
+      <p class="t">14/20 &middot; 700 &middot; +0.1em &middot; #331F5E</p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin: 0">NAŠE SLUŽBY</p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">H1 &middot; Nadpis stránky</p>
+      <p>Bold, sentence case. <strong>Dva řádky ve dvou barvách:</strong> první fialový #331F5E, druhý modrý #008FCD. Na fialovém podkladu bílá + světle modrá #46B9EB.</p>
+      <p class="t">56/1.08 &middot; 700 &middot; -0.015em</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-weight: 700; font-size: 56px; line-height: 1.08; letter-spacing: -.015em; text-wrap: balance"><span style="color: #331F5E">Průmyslová měřicí</span><br><span style="color: #008FCD">a automatizační technika</span></p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">H2 &middot; Nadpis sekce</p>
+      <p>Bold, sentence case, stejné střídání barev jako H1. Nad ním vždy štítek.</p>
+      <p class="t">38/1.12 &middot; 700 &middot; -0.01em</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-weight: 700; font-size: 38px; line-height: 1.12; letter-spacing: -.01em"><span style="color: #331F5E">Od prodeje až po servis,</span><br><span style="color: #008FCD">kalibraci a justáž měřidel</span></p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">H3 &middot; Podnadpis</p>
+      <p>Bold, sentence case. Nadpis karty nebo bloku uvnitř sekce.</p>
+      <p class="t">22/1.25 &middot; 700 &middot; #535353</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-weight: 700; font-size: 22px; line-height: 1.25; color: #535353">Pořízením měřidel spolupráce s námi nekončí, ale začíná</p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">Perex</p>
+      <p>Regular, zvětšený odstavec pod H1. Maximálně tři řádky.</p>
+      <p class="t">19/1.8 &middot; 400 &middot; #707070</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-size: 19px; line-height: 1.8; color: #707070; max-width: 62ch">Měřicí přístroje vybereme přesně podle vašich potřeb. Jsme výhradními dovozci značek Rotronic, MadgeTech či Teracom, díky čemuž nabízíme exkluzivní podporu a servis.</p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">Odstavec</p>
+      <p>Regular, sentence case, prostrkání 0. Řádek max. 68 znaků.</p>
+      <p class="t">16/1.7 (27&nbsp;px, jako web) &middot; 400 &middot; #707070</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #707070; max-width: 68ch">Naším cílem je dlouhodobá specializovaná spolupráce s vysokou přidanou hodnotou. Máme vlastní špičkově vybavenou kalibrační laboratoř a u všech našich kalibrací běžně provádíme i justáž měřidel. Na všechny přístroje poskytujeme rychlý in-house záruční i pozáruční servis.</p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">Odrážky</p>
+      <p>Bold podle manuálu &mdash; jsou to tvrzení, ne běžný text. Odrážka je brand asset <span class="mono">odrazka.svg</span> &mdash; modré kolečko s bílou fajfkou, 16&nbsp;px, zarovnané na první řádek.</p>
+      <p class="t">16/1.5 &middot; 700 &middot; #707070 &middot; gap 12</p>
+    </div>
+    <div>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+        <li style="display: flex; align-items: flex-start; gap: 12px; font-weight: 700; font-size: 16px; line-height: 1.5; color: #707070"><span style="width: 16px; height: 16px; display: inline-flex; flex: 0 0 auto; margin-top: 4px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.67 10.67"><g><g><circle fill="#008FCD" cx="5.33" cy="5.33" r="5.33"/><polygon fill="#fff" points="4.68 7.5 2.87 5.69 3.57 4.98 4.68 6.09 7.09 3.68 7.8 4.39 4.68 7.5"/></g></g></svg></span>Profesionální kalibrace a justáž měřidel</li>
+        <li style="display: flex; align-items: flex-start; gap: 12px; font-weight: 700; font-size: 16px; line-height: 1.5; color: #707070"><span style="width: 16px; height: 16px; display: inline-flex; flex: 0 0 auto; margin-top: 4px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.67 10.67"><g><g><circle fill="#008FCD" cx="5.33" cy="5.33" r="5.33"/><polygon fill="#fff" points="4.68 7.5 2.87 5.69 3.57 4.98 4.68 6.09 7.09 3.68 7.8 4.39 4.68 7.5"/></g></g></svg></span>Vlastní servisní středisko, záruční i pozáruční</li>
+        <li style="display: flex; align-items: flex-start; gap: 12px; font-weight: 700; font-size: 16px; line-height: 1.5; color: #707070"><span style="width: 16px; height: 16px; display: inline-flex; flex: 0 0 auto; margin-top: 4px"><svg aria-hidden="true" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.67 10.67"><g><g><circle fill="#008FCD" cx="5.33" cy="5.33" r="5.33"/><polygon fill="#fff" points="4.68 7.5 2.87 5.69 3.57 4.98 4.68 6.09 7.09 3.68 7.8 4.39 4.68 7.5"/></g></g></svg></span>IQ/OQ/PQ validace monitorovacích systémů</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">CTA text</p>
+      <p>Bold, verzálky, prostrkání 50&nbsp;pt. Na modré bílý text, na zelené <strong>fialový</strong>.</p>
+      <p class="t">14/1 &middot; 700 &middot; +0.05em</p>
+    </div>
+    <div style="display: flex; gap: 28px; align-items: center">
+      <span style="display: inline-flex; align-items: center; gap: 10px; padding: 19px 40px; background: #008FCD; color: #FDFDFD; border-radius: 0 20px 0 20px; font-weight: 700; font-size: 14px; line-height: 20px; letter-spacing: .05em; text-transform: uppercase">VÍCE O SLUŽBÁCH <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg></span>
+      <span style="display: inline-flex; align-items: center; padding: 19px 40px; background: #23CE6B; color: #331F5E; border-radius: 0 20px 0 20px; font-weight: 700; font-size: 14px; line-height: 20px; letter-spacing: .05em; text-transform: uppercase">KONTAKTNÍ TLAČÍTKO</span>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">Popisek &middot; meta</p>
+      <p>Regular. Datum, jednotka, poznámka pod formulářem, popisek obrázku.</p>
+      <p class="t">13/1.55 &middot; 400 &middot; #707070</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-size: 13px; line-height: 1.55; color: #707070">04.09.2025 &middot; Rotronic &middot; 4 min čtení</p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="meta">
+      <p class="n">Technický údaj</p>
+      <p>Tabulkové číslice, ne proporcionální. Parametry přístrojů, tolerance, rozsahy.</p>
+      <p class="t">15/1.5 &middot; 500 &middot; tnum</p>
+    </div>
+    <div style="display: flex; gap: 32px; font-variant-numeric: tabular-nums; font-weight: 500; font-size: 15px">
+      <span>&plusmn;0,8&nbsp;%RH</span><span>&minus;100 až +200&nbsp;&deg;C</span><span>0&ndash;10&nbsp;V / 4&ndash;20&nbsp;mA</span><span>IP&nbsp;65</span>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px">
+    <div class="card" style="padding: 24px">
+      <p class="lbl" style="margin: 0 0 10px">Mobilní škála</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #3A4452">H1 34/1.15 &middot; H2 26/1.2 &middot; H3 19/1.3<br>Perex 17/1.6 &middot; Odstavec 16/1.7<br>Štítek a CTA zůstávají beze změny &mdash; jsou to kotvy, ne obsah.</p>
+    </div>
+    <div class="card" style="padding: 24px">
+      <p class="lbl" style="margin: 0 0 10px">Pravidla, která se porušují nejčastěji</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #3A4452">Nadpisy nikdy verzálkami &mdash; verzálky patří jen štítku a CTA.<br>Nikdy víc než dvě velikosti nadpisu v jedné sekci.<br>Kurzíva se v Satoshi na webu nepoužívá; zvýrazňuje se Boldem.</p>
+    </div>
+    <div class="card" style="padding: 24px; background: #E6F4FA; border-color: #B4E2F6">
+      <p class="lbl" style="margin: 0 0 10px; color: #0B5B80">Česká sazba</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #0B5B80">Nezlomitelná mezera po jednopísmenných předložkách a před jednotkou (20&nbsp;&deg;C, 5&nbsp;m).<br>České uvozovky &bdquo;takto&ldquo;.<br>Pomlčka &ndash; ne spojovník. Rozsahy 10&ndash;20.</p>
+    </div>
+  </div>
+
+</div>
+</div></main>
+<script src="js/styleguide.js"></script>
+</body>
+</html>

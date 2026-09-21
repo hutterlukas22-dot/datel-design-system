@@ -1,0 +1,91 @@
+/* =====================================================================
+   DATEL — brandové prvky pro web. Potřebuje css/tokens.css.
+   Třídy mají předponu .dtl-, nic z webu nepřepisují. Cesty k assetům jsou relativní k tomuto souboru.
+   Podrobnosti a pravidla: DESIGN.md
+   ===================================================================== */
+
+/* ---------- tvar rohů: podpis značky ---------- */
+.dtl-corner    { border-radius: var(--dtl-corner); }
+.dtl-corner-sm { border-radius: var(--dtl-corner-sm); }
+
+/* ---------- štítek → nadpis → perex ---------- */
+.dtl-eyebrow {
+  display: flex; align-items: center; gap: 18px; margin: 0 0 14px;
+  font: 700 14px/20px var(--dtl-font); letter-spacing: var(--dtl-eyebrow-ls); text-transform: uppercase;
+  color: var(--dtl-violet);
+}
+.dtl-eyebrow::before { content: ""; flex: 0 0 auto; width: 56px; height: 3px; background: currentColor; }
+.dtl-h1, .dtl-h2 { margin: 0 0 22px; color: var(--dtl-violet); text-wrap: balance; }
+.dtl-h1 { font: var(--dtl-h1); letter-spacing: -.015em; }
+.dtl-h2 { font: var(--dtl-h2); letter-spacing: -.01em; }
+.dtl-h1 span, .dtl-h2 span { color: var(--dtl-blue); }   /* druhý řádek / část nadpisu modře */
+.dtl-h3 { margin: 0 0 12px; font: var(--dtl-h3); color: var(--dtl-ink-2); }
+.dtl-lead { margin: 0 0 24px; font: var(--dtl-lead); color: var(--dtl-ink-3); max-width: 68ch; }
+.dtl-text { margin: 0 0 16px; font: var(--dtl-body); color: var(--dtl-ink-3); max-width: 68ch; }
+.dtl-meta { font: var(--dtl-meta); color: var(--dtl-ink-3); }
+
+/* na fialovém podkladu */
+.dtl-violet { background: var(--dtl-violet); color: var(--dtl-bg); }
+.dtl-violet .dtl-eyebrow { color: var(--dtl-bg); }
+.dtl-violet .dtl-h1, .dtl-violet .dtl-h2 { color: var(--dtl-bg); }
+.dtl-violet .dtl-h1 span, .dtl-violet .dtl-h2 span { color: var(--dtl-blue-light); }
+.dtl-violet .dtl-lead, .dtl-violet .dtl-text { color: #E4E4E4; }
+
+/* ---------- tlačítka (odpovídají produkčnímu .button webu) ---------- */
+.dtl-btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: var(--dtl-btn-pad); border: 0; border-radius: var(--dtl-corner);
+  font: var(--dtl-btn-font); letter-spacing: var(--dtl-cta-ls); text-transform: uppercase; text-decoration: none;
+  background: var(--dtl-green); color: var(--dtl-green-ink); cursor: pointer; white-space: nowrap;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, background .2s ease-in-out;
+}
+.dtl-btn:hover { background: var(--dtl-green-hover); transform: translateY(var(--dtl-btn-lift)); box-shadow: var(--dtl-shadow-cta); }
+.dtl-btn:focus-visible { outline: 2px solid var(--dtl-green); outline-offset: 3px; }
+.dtl-btn--blue { background: var(--dtl-blue); color: var(--dtl-bg); }
+.dtl-btn--blue:hover { background: var(--dtl-blue-light); box-shadow: var(--dtl-shadow-blue); }
+.dtl-btn--blue:focus-visible { outline-color: var(--dtl-blue); }
+.dtl-btn--violet { background: var(--dtl-violet); color: var(--dtl-bg); }
+.dtl-btn--violet:hover { background: var(--dtl-violet); box-shadow: var(--dtl-shadow-violet); }
+.dtl-btn--white { background: rgba(253,253,253,.4); border: 2px solid var(--dtl-bg); color: var(--dtl-bg); padding: 17px 38px; }
+.dtl-btn--white:hover { background: rgba(253,253,253,.4); box-shadow: var(--dtl-shadow-blue); }
+.dtl-btn--sm { padding: var(--dtl-btn-pad-sm); font-size: 13px; }
+.dtl-btn[disabled], .dtl-btn[aria-disabled="true"] { background: var(--dtl-line); color: #9AA3AE; box-shadow: none; transform: none; cursor: not-allowed; }
+
+/* ---------- karta ---------- */
+.dtl-card { background: var(--dtl-bg); border-radius: var(--dtl-corner); box-shadow: var(--dtl-shadow-card); padding: 32px 28px; }
+
+/* ---------- odrážky: brand asset odrazka.svg ---------- */
+.dtl-list { list-style: none; margin: 0 0 24px; padding: 0; }
+.dtl-list li { position: relative; padding-left: 28px; margin-bottom: 12px; font: 700 16px/1.5 var(--dtl-font); color: var(--dtl-ink-3); }
+.dtl-list li::before { content: ""; position: absolute; left: 0; top: 4px; width: 16px; height: 16px; background: url(../assets/icons/odrazka.svg) no-repeat center / contain; }
+
+/* ---------- pattern: opakuje se do všech stran, krytí na celé ploše ---------- */
+.dtl-pattern {
+  position: absolute; inset: 0; pointer-events: none;
+  background: url(../assets/pattern.svg) repeat 0 0 / var(--dtl-tile-w) var(--dtl-tile-h);
+  opacity: var(--dtl-pattern-on-white);
+}
+.dtl-violet .dtl-pattern { opacity: var(--dtl-pattern-on-violet); }
+
+/* ---------- pravítka: na hraně obrazovky u dolní hrany sekce; levé = SVG, pravé zrcadlově ----------
+   Sekce potřebuje position: relative a overflow: hidden (nebo clip). */
+.dtl-rulers { position: relative; overflow: hidden; }
+.dtl-rulers::before, .dtl-rulers::after {
+  content: ""; position: absolute; bottom: 0; z-index: 2; pointer-events: none;
+  width: var(--dtl-ruler-w); height: 100%;
+  background: url(../assets/ruler-l.svg) repeat-y left bottom / 100% auto;
+  opacity: var(--dtl-ruler-opacity);
+}
+.dtl-rulers::before { left: 0; }
+.dtl-rulers::after  { right: 0; background-image: url(../assets/ruler-r.svg); }
+
+/* ---------- tabulka: jednotný styl pro web i tisk ----------
+   Hranaté rohy (výjimka z pravidla rohů), bez zebry, důraz jen tučným řezem.
+   Na mobilu tabulku zabalte do .dtl-table-wrap — posouvá se vodorovně, nezmenšuje se. */
+.dtl-table-wrap { overflow-x: auto; }
+.dtl-table { width: 100%; border-collapse: collapse; border: 1px solid var(--dtl-table-line); background: var(--dtl-bg);
+  font: 400 16px/27px var(--dtl-font); color: var(--dtl-ink-3); font-variant-numeric: tabular-nums; }
+.dtl-table th, .dtl-table td { border: 1px solid var(--dtl-table-line); padding: 14px 20px; text-align: left; vertical-align: top; background: transparent; }
+.dtl-table tr, .dtl-table tbody tr:nth-child(n) { background: transparent; }  /* web podbarvuje sudé řádky všech tabulek */
+.dtl-table thead th { background: var(--dtl-table-head); font: 700 18px/25px var(--dtl-font); color: var(--dtl-ink-2); vertical-align: middle; }
+.dtl-table .dtl-table__item { font-weight: 700; color: var(--dtl-ink-2); }
